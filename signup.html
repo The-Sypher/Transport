@@ -52,29 +52,79 @@
         </ul>
     </nav>
 
+    <div class="container" style="padding-top: 5em; padding-bottom: 2em;">
+        <div class="row">
+            <div class="col-sm-4">
+                <h1><b>SWIFTT TRANSPORT...</b></h1>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h5>Call Now | <span style="color: darkgray;"><a href="tel:961918394">Tel:9619618394</a></span></h5>
+            </div>
+        </div>
+    </div>
+
 
     <div class="container">
         <fieldset>
-            <legend>Enter Your Details</legend>
-            <form class="form-control needs-validated" action="POST">
-                <div class="form-group">
+            <legend>Become a Driver:</legend>
+            <form class="form-control bg-light" action="POST" onsubmit="return validate();">
+
+                <div class="form-group bg-light">
                     <label for='fname'>First Name:</label>
-                    <input type="text" class="form-control" placeholder="First Name" id="fname" required>
+                    <input type="text" class="form-control bg-light" placeholder="First Name" id="fname" >
                 </div>
 
                 <div class="form-group">
                     <label for="lname">Last Name:</label>
-                    <input type="text" class="form-control" placeholder="Last Name" id="lname" required>
+                    <input type="text" class="form-control bg-light" placeholder="Last Name" id="last" >
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" placeholder="E-mail" id="email" required>
+                    <input type="email" class="form-control bg-light" placeholder="E-mail" id="email" >
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="text" class="form-control bg-light" placeholder="Age" id="age">
                 </div>
 
                 <div class="form-group">
                     <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" placeholder="********" id="pwd" required>
+                    <input type="password" class="form-control bg-light" placeholder="********" id="pass" >
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">Mobile Number:</label>
+                    <input type="text" id="tel" class="form-control bg-light" placeholder="XXXXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" cols="30" rows="5" class="form-control bg-light"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" class="form-control bg-light" id="dob" min="1970-01-01" max="2001-12-01" required>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <select id="state" class="form-control bg-light" required>
+                        <option value="" selected disabled><span style="color: grey;">--Select--</span></option>
+                        <option value="MAHARASHTRA">Maharashtra</option>
+                        <option value="UTTAR PRADESH">Uttar Pradesh</option>
+                        <option value="RAJASTHAN">Rajasthan</option>
+                        <option value="KERELA">Kerela</option>
+                        <option value="TAMILNADU">Tamil Nadu</option>
+                        <option value="KARNATAKA">Karnataka</option>
+                        <option value="MADHYA PRADESH">Madhya Pradesh</option>
+                        <option value="BIHAR">Bihar</option>
+                        <option value="ANDHRA PRADESH">Andhra Pradesh</option>
+                    </select>
                 </div>
 
                 <input type="submit" class="btn btn-outline-success" value="Submit">
@@ -99,5 +149,6 @@
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
+
 
 </html>
