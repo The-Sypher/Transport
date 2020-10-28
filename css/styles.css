@@ -8,14 +8,11 @@ body, html {
     max-height: 500px;
 }
 .parallax {
-  /* The image used */
   
   background-image: url("../img/aaa.jpg");
 
-  /* Full height */
   height: 100%;
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
