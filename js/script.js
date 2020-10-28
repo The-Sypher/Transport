@@ -2,6 +2,12 @@
 $(document).ready(function () {
     $("[data-toggle='tooltip']").tooltip();
 });
+$("#anchor").click( function (e) {
+    e.preventDefault();
+    $( "body" ).animate({
+        scrollTop: $( "#contactUs" ).offset().top
+    },2000);
+});
 function validate()
 {
 
