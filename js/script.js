@@ -190,3 +190,24 @@ function isPass( elem, helperMsg )
         return false;
     }
 }
+
+function val()
+{
+    var email = document.getElementById("email");
+    var pass = document.getElementById("pass");
+
+    if(notEmpty(email, "Please enter email"))
+    {
+        if(notEmpty(pass, "Please enter password"))
+        {
+            if(isEmail(email, "Enter valid e-mail address"))
+            {
+                if(isPass(pass, "Please enter valid password"))
+                {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}

@@ -66,16 +66,19 @@
         <div class="container">
             <fieldset>
                 <legend>Log in</legend>
-                <form method="POST" class="form-control bg-light">
+                <form onsubmit="return val();" method="POST" class="form-control bg-light">
                     <div class="form-group bg-light">
                         <label for="email">E-mail</label>
-                        <input type="text" class="form-control bg-light" placeholder="Enter your E-mail">
+                        <input type="text" id="email" class="form-control bg-light" placeholder="Enter your E-mail">
                     </div>
 
                     <div class="form-group bg-light">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control bg-light" placeholder="********">
+                        <input type="password" id="pass" class="form-control bg-light" placeholder="********">
                     </div>
+
+                    <input type="submit" value="Log in" class="btn btn-outline-success">
+                    <button type="reset" class="btn btn-dark" >Clear</button>
                 </form>
             </fieldset>
         </div>
