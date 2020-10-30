@@ -15,11 +15,12 @@ function validate()
     var lname = document.getElementById( "last" );
     var mail = document.getElementById( "email" );
     var nmb = document.getElementById( "tel" );
-    var gend = document.getElementsByName( "gender" );
     var age = document.getElementById( "age" );
     var address = document.getElementById( "address" );
     var pwd = document.getElementById( "pass" );
     var states = document.getElementById( "state" );
+    var dob = document.getElementById("dob");
+    var license = document.getElementById("license");
 
     if ( isName( name, "Please enter name" ) )
     {
@@ -27,18 +28,24 @@ function validate()
         {
             if ( isEmail( mail, "Please enter a valid email address" ) )
             {
-                if ( Isage( age, 18 ) )
+                if ( isPass( pwd, "Enter password" ) )
                 {
-                    if ( isPass( pwd, "Enter password" ) )
+                    if ( Isage( age, 18 ) )
                     {
                         if ( isNumber( nmb, "Please enter valid phone number" ) )
                         {
                             if ( isAdd( address, "Please enter valid address" ) )
                             {
-                                if ( myState( states, "Choose a state" ) )
+                                if(isdob(dob, "Please select date"))
                                 {
-                                    return true;
-                                }   
+                                    if ( myState( states, "Choose a state" ) )
+                                    {
+                                        if(isli(license, "Please enter valid license number"))
+                                        {
+                                            return true;
+                                        }
+                                    }   
+                                }
                             }
                         }
                     }
@@ -104,7 +111,19 @@ function isEmail( elem, helperMsg )
         return false;
     }
 }
-
+function isdob(elem, helperMsg)
+{
+    if(elem.value)
+    {
+        return true;
+    }
+    else
+    {
+        alert(helperMsg);
+        elem.focus();
+        return false;
+    }
+}
 function isNumber( elem, helperMsg )
 {
     var num = /^[0-9]+$/;
@@ -114,22 +133,8 @@ function isNumber( elem, helperMsg )
     }
     else
     {
-        alert( "Please enter valid phone number" )
+        alert( helperMsg);
         elem.focus();
-        return false;
-    }
-}
-
-function isGen( elem, helperMsg )
-{
-    if ( elem[ 0 ].checked == true || elem[ 1 ].checked == true )
-    {
-        return true;
-    }
-    else
-    {
-        alert( helperMsg );
-        elem[ 0 ].focus();
         return false;
     }
 }
@@ -150,7 +155,7 @@ function Isage( elem, min )
 
 function isAdd( elem, helperMsg )
 {
-    var ad = /^[a-zA-Z0-9\s,'-]*$/;
+    var ad = /^[a-zA-Z0-9\s,'-]+$/;
     if ( elem.value.match( ad ) )
     {
         return true;
@@ -165,12 +170,13 @@ function isAdd( elem, helperMsg )
 
 function myState( elem, helperMsg )
 {
-    if ( elem.value == "Please Choose" )
+    if (elem.value == " ")
     {
         alert( helperMsg );
         elem.focus();
         return false;
-    } else
+    } 
+    else
     {
         return true;
     }
@@ -187,6 +193,21 @@ function isPass( elem, helperMsg )
     {
         alert( helperMsg );
         elem.focus();
+        return false;
+    }
+}
+
+function isli( elem, helperMsg)
+{
+    var regex = /^(([A-Z]{2}[0-9]{2}( ))|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])([0-9]{7})+$/;
+    if(elem.value.match(regex))
+    {
+        return true;
+    }
+    else
+    {
+        alert(helperMsg);
+        elem.focus;
         return false;
     }
 }

@@ -1,5 +1,7 @@
+<?php
+    session_start();
+?>
 <html>
-
     <head>
         <title> SWIFT TRANSPORT </title>
         <meta charset="utf-8">
@@ -15,7 +17,7 @@
         <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-warning" id="navbar">
 
-            <a href="index.html" class="navbar-brand"><img src="img/swift.png" style="width: 100px;"></a>
+            <a href="index.php" class="navbar-brand"><img src="img/swift.png" style="width: 100px;"></a>
 
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -26,11 +28,11 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="navbar-item">
-                        <a href="history.html" class="nav-link">History</a>
+                        <a href="history.php" class="nav-link">History</a>
                     </li>
     
                     <li class="navbar-item">
-                        <a href="career.html" class="nav-link">Careers</a>
+                        <a href="career.php" class="nav-link">Careers</a>
                     </li>
     
                     <li class="navbar-item">
@@ -44,13 +46,13 @@
                 </ul>
     
     
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-danger" onclick="location.href='signup.html'">Sign up</button>
-                        <button type="button" class="btn btn-outline-dark" onclick="location.href='login.html'">Log
-                            in</button>
-                    </li>
-                </ul>
+                <?php
+                if(!isset($_SESSION['login']))
+                {
+                    $nav = "<ul class=\"navbar-nav ml-auto\"><li class=\"nav-item\"><button type=\"button\" class=\"btn btn-danger\" onclick=\"location.href='signup.php'\">Sign up</button><button type=\"button\" class=\"btn btn-outline-dark\" onclick=\"location.href='login.php'\">Log in</button></li></ul>";
+                    echo $nav;
+                }
+                ?>
             </div>
         </nav>
 
@@ -71,12 +73,12 @@
         
         <div class="row" style="margin-top: 10px;">
             <div class="col-sm-6">
-                <a href="career.html">
+                <a href="career.php">
                     <div id="logistics"><h1>Logistics</h1></div>
                 </a>
             </div>
             <div class="col-sm-6" >
-                <a href="signup.html">
+                <a href="signup.php">
                     <div id="apply"><h1>Apply to Drive</h1></div>
                 </a>
             </div>

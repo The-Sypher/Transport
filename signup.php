@@ -27,7 +27,7 @@
         {
             $query="INSERT INTO users (id,fname,lname,email,password,age,mobile,address,dob,state,license) VALUES (NULL,'$input_fname','$input_lname','$input_email','$input_password','$input_age','$input_tel','$input_addr','$input_dob','$input_state','$input_licence')";
             mysqli_query($conn,$query);
-            header("Location: thanks.html");
+            header("Location: thanks.php");
         }
     }
 ?>
@@ -52,23 +52,23 @@
     <nav class="navbar navbar-expand-sm navbar-light sticky-top bg-warning" id="navbar">
         <ul class="navbar-nav">
             <li class="navbar-item">
-                <a href="index.html" class="navbar-brand"><img src="img/swift.png" style="width: 100px;"></a>
+                <a href="index.php" class="navbar-brand"><img src="img/swift.png" style="width: 100px;"></a>
             </li>
 
             <li class="navbar-item">
-                <a href="history.html" class="nav-link">History</a>
+                <a href="history.php" class="nav-link">History</a>
             </li>
 
             <li class="navbar-item">
-                <a href="career.html" class="nav-link">Careers</a>
+                <a href="career.php" class="nav-link">Careers</a>
             </li>
 
             <li class="navbar-item">
-                <a href="about.html" class="nav-link">About Us</a>
+                <a href="about.php" class="nav-link">About Us</a>
             </li>
 
             <li class="navbar-item">
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="contact.php" class="nav-link">Contact</a>
             </li>
 
         </ul>
@@ -76,8 +76,8 @@
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <button type="button" class="btn btn-danger" onclick="location.href='signup.html'">Sign up</button>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='login.html'">Log
+                <button type="button" class="btn btn-danger" onclick="location.href='signup.php'">Sign up</button>
+                <button type="button" class="btn btn-outline-dark" onclick="location.href='login.php'">Log
                     in</button>
             </li>
         </ul>
@@ -139,14 +139,14 @@
 
                 <div class="form-group">
                     <label for="dob">Date of Birth:</label>
-                    <input type="date" class="form-control bg-light" id="dob" min="1970-01-01" max="2001-12-01" required name="dob">
+                    <input type="date" class="form-control bg-light" id="dob" name="dob">
 
                 </div>
 
                 <div class="form-group">
                     <label for="state">State:</label>
-                    <select id="state" class="form-control bg-light" required name="state">
-                        <option value="" selected disabled><span style="color: grey;">--Select--</span></option>
+                    <select id="state" class="form-control bg-light" name="state">
+                        <option value=" " selected disabled><span style="color: grey;">--Select--</span></option>
                         <option value="MAHARASHTRA">Maharashtra</option>
                         <option value="UTTAR PRADESH">Uttar Pradesh</option>
                         <option value="RAJASTHAN">Rajasthan</option>
@@ -161,7 +161,7 @@
 
                 <div class="form-group bg-light">
                     <label for="license">Upload your Diver's Licence Number:</label>
-                    <input type="text" name="license" class="form-control bg-light">
+                    <input type="text" id="license" name="license" class="form-control bg-light">
                 </div>
 
                 <input type="submit" class="btn btn-outline-success" value="Submit" name="submit">
@@ -170,7 +170,7 @@
         </fieldset>
 
         <div class="">
-            Already have an account? <a data-toggle="tooltip" title="Go to Log in Page" href="login.html">Log in</a>
+            Already have an account? <a data-toggle="tooltip" title="Go to Log in Page" href="login.php">Log in</a>
         </div>
     </div>
 

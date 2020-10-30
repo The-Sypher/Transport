@@ -1,4 +1,8 @@
+<?php
+    session_start();
+?>
 <html>
+
     <head>
         <title> SWIFT TRANSPORT </title>
         <meta charset="utf-8">
@@ -7,12 +11,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
-    
+
     </head>
+
     <body>
         <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-warning" id="navbar">
         
-            <a href="index.html" class="navbar-brand"><img src="img/swift.png" style="width: 100px;"></a>
+            <a href="index.php" class="navbar-brand"><img src="img/swift.png" style="width: 100px;"></a>
         
         
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -23,34 +28,35 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="navbar-item">
-                        <a href="history.html" class="nav-link">History</a>
+                        <a href="history.php" class="nav-link">History</a>
                     </li>
         
                     <li class="navbar-item">
-                        <a href="career.html" class="nav-link">Careers</a>
+                        <a href="career.php" class="nav-link">Careers</a>
                     </li>
         
                     <li class="navbar-item">
-                        <a href="about.html" class="nav-link">About Us</a>
+                        <a href="#" class="nav-link">About Us</a>
                     </li>
         
                     <li class="navbar-item">
-                        <a href="contact.html" id="anchor" class="nav-link">Contact</a>
+                        <a href="#contactUs" id="anchor" class="nav-link">Contact</a>
                     </li>
         
                 </ul>
         
         
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-danger" onclick="location.href='signup.html'">Sign up</button>
-                        <button type="button" class="btn btn-outline-dark" onclick="location.href='login.html'">Log
-                            in</button>
-                    </li>
-                </ul>
+                <?php
+                if(!isset($_SESSION['login']))
+                {
+                    $nav = "<ul class=\"navbar-nav ml-auto\"><li class=\"nav-item\"><button type=\"button\" class=\"btn btn-danger\" onclick=\"location.href='signup.php'\">Sign up</button><button type=\"button\" class=\"btn btn-outline-dark\" onclick=\"location.href='login.php'\">Log in</button></li></ul>";
+                    echo $nav;
+                }
+                ?>
             </div>
         </nav>
-       
+    
+    
         <div class="container" style="padding-top: 5em; padding-bottom: 2em;">
             <div class="row">
                 <div class="col-sm-4">
@@ -62,27 +68,43 @@
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <fieldset>
-                <legend>Log in</legend>
-                <form onsubmit="return val();" method="POST" class="form-control bg-light">
-                    <div class="form-group bg-light">
-                        <label for="email">E-mail</label>
-                        <input type="text" id="email" class="form-control bg-light" placeholder="Enter your E-mail">
-                    </div>
-
-                    <div class="form-group bg-light">
-                        <label for="password">Password:</label>
-                        <input type="password" id="pass" class="form-control bg-light" placeholder="********">
-                    </div>
-
-                    <input type="submit" value="Log in" class="btn btn-outline-success">
-                    <button type="reset" class="btn btn-dark" >Clear</button>
-                </form>
-            </fieldset>
+        <div class="parallax" style="background-image: url('img/History.webp'); text-align: center;">
+                <h1 style="color: aliceblue; top: 40%; font-size: 100px;text-decoration: underline;" class="col-sm-12">History</h1>
         </div>
-        
+            
+
+        <div class="container text-center" style="border-top: solid 0.5px red;">
+            <h2>
+                SWIFT TRANSPORT (ST) by 'Mr.Anand Borade' one of the finest Transport solutions in the market as of today. It shares a set of fivecore values :integrity , understanding , excellence, unity and responsibility .It aims at providing thebest services at affordable prices and on time safe delivery .Here at ST we are making every possibleeffort to make your move smooth.
+            </h2>
+            <br><br>
+            <h3>
+                OBJECTIVE:
+            </h3>
+            <h4>
+                OUR ASPIRATION IS TO BE A WORLD -CLASS TRANSPORT  COMPANY WITH DOMINANT INDIAN LEADERSHIP
+                AND GLOBAL PRESENCE.
+            </h4>
+            <br><br>
+            <h3>
+                CHARACTERISTICS:
+            </h3>
+            <h4>
+                1) Imbibe high standars of business ethics and organizational values s.<br>
+                2) foster a culture of trust , openness and mutual concern to make working a stimulating and challenging
+                experience for our people.<br>
+                3) Strive for a customer delight through quality services.
+            </h4>
+            <br><br>
+            <h3>
+                KEY FACTS:
+            </h3>
+            <h4>
+                SWIFT TRANSPORT has grown over 50% every year. It has been maintaining excellent financial
+                results every year with its teams of professionals who have necessary expertise and skill to provide
+                total Transport solution.
+            </h4>
+        </div>
         <div id="contactUs" class="jumbotron text-center bg-dark" style="margin-bottom: 0; text-align: center;">
             <div class="container text-white">
                 <h3>Contact Us</h3>
@@ -103,6 +125,7 @@
                 </div>
             </div>
         </div>
+        
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -113,4 +136,5 @@
             crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
     </body>
+
 </html>
