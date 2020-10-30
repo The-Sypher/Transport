@@ -23,6 +23,7 @@
                 $_SESSION['email']=$input_email;
                 $_SESSION['fname']=$user_fname;
                 $_SESSION['lname']=$user_lname;
+                $_SESSION['login']=1;
                 header("Location:index.html");
             }
             else
