@@ -6,8 +6,11 @@
     {
         $input_email=validate($_POST['email']);
         $input_password=validate($_POST['password']);
+        echo $input_email;
+        echo $input_password;
         $query="SELECT fname, lname, password FROM users WHERE email='$input_email'";
         $res=mysqli_query($conn,$query);
+        echo mysqli_error($conn);
         if(mysqli_num_rows($res)>0)
         {
             $row=mysqli_fetch_assoc($res);
@@ -29,10 +32,11 @@
         }
         else
         {
-            $loginError="<div clas='alert'>This email is not registered with us</div>";
+            $loginError="<div class='alert alert-warning'>This email is not registered with us</div>";
         }
     }
 ?>
+
 
 <html>
 
@@ -43,55 +47,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <script>
-        function val() {
-            echo "asdjbauishfbguiaysdbvfuiaydhbfuaydsbfahudbfhabfjhasdnbjkahbfjkashbfajkbfhkjadfbjsdb";
-            var mail = document.getElementById("email");
-            var pwd = document.getElementById("password");
 
-            if (isEmail(mail, "Please enter a valid email address")) {
-                if (isPass(pwd, "Please enter a valid passowrd")) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        function notEmpty(elem, helperMsg) {
-            if (elem.value == "") {
-                alert(helperMsg);
-                elem.focus();
-                return false;
-            }
-            return true;
-        }
-
-
-        function isEmail(elem, helperMsg) {
-            var em = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if (elem.value.match(em)) {
-                return true;
-            } else {
-                alert(helperMsg);
-                elem.focus();
-                return false;
-            }
-        }
-
-        function isPass(elem, helperMsg) {
-            var p = /^[0-9a-zA-Z]+$/;
-            if (elem.value.match(p)) {
-                return true;
-            } else {
-                alert(helperMsg);
-                elem.focus();
-                return false;
-            }
-        }
-
-    </script>
 </head>
-
 
 <body>
     <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-warning" id="navbar">
@@ -138,7 +95,7 @@
     <div class="container" style="padding-top: 5em; padding-bottom: 2em;">
         <div class="row">
             <div class="col-sm-4">
-                <h1><b>SWIFT TRANSPORT...</b></h1>
+                <h1><b>SWIFTT TRANSPORT...</b></h1>
             </div>
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
@@ -151,18 +108,19 @@
         <fieldset>
             <legend>Log in</legend>
             <?php echo $loginError; ?>
-            <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST" onsubmit="return val();" class="form-control bg-light">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" onsubmit="return val();" method="POST">
                 <div class="form-group bg-light">
-                    <label for="email">E-mail</label>
-                    <input type="text" name="email" class="form-control bg-light" placeholder="Enter your E-mail">
+                    <label for="text">E-mail</label>
+                    <input type="text" id="email" name="email" class="form-control bg-light" placeholder="Enter your E-mail">
                 </div>
 
                 <div class="form-group bg-light">
                     <label for="password">Password:</label>
-                    <input type="password" name="password" class="form-control bg-light" placeholder="********">
+                    <input type="password" id="password" name="password" class="form-control bg-light" placeholder="********">
                 </div>
 
-                <button type="submit" class="btn btn-outline-success">Sign up</button>
+                <input type="submit" value="Log in" name="submit" class="btn btn-outline-success">
+                <button type="reset" class="btn btn-dark">Clear</button>
             </form>
         </fieldset>
     </div>
@@ -187,6 +145,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

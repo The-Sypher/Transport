@@ -194,7 +194,7 @@ function isPass( elem, helperMsg )
 function val()
 {
     var email = document.getElementById("email");
-    var pass = document.getElementById("pass");
+    var pass = document.getElementById("password");
 
     if(notEmpty(email, "Please enter email"))
     {
