@@ -55,38 +55,45 @@
 <body>
     <!-- Navbar -->
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top bg-warning" id="navbar">
-        <ul class="navbar-nav">
-            <li class="navbar-item">
-                <a href="index.php" class="navbar-brand"><img src="img/swift.png" style="width: 100px;"></a>
-            </li>
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-warning" id="navbar">
 
-            <li class="navbar-item">
-                <a href="history.php" class="nav-link">History</a>
-            </li>
-
-            <li class="navbar-item">
-                <a href="career.php" class="nav-link">Careers</a>
-            </li>
-
-            <li class="navbar-item">
-                <a href="about.php" class="nav-link">About Us</a>
-            </li>
-
-            <li class="navbar-item">
-                <a href="contact.php" class="nav-link">Contact</a>
-            </li>
-
-        </ul>
+        <a href="index.php" class="navbar-brand"><img src="img/swift.png" style="width: 100px;"></a>
 
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <button type="button" class="btn btn-danger" onclick="location.href='signup.php'">Sign up</button>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='login.php'">Log
-                    in</button>
-            </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a href="history.php" class="nav-link">History</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="career.php" class="nav-link">Careers</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="about.php" class="nav-link">About Us</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="contact.php" id="anchor" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <?php
+                if(!isset($_SESSION['login']))
+                {
+                     $nav = "<ul class=\"navbar-nav ml-auto\"><li class=\"nav-item\" style=\"margin-right: 0.5em;\"><button type=\"button\" class=\"btn btn-danger\" onclick=\"location.href='signup.php'\">Sign up</button></li><li class=\"nav-item\"><button type=\"button\" class=\"btn btn-outline-dark\" onclick=\"location.href='login.php'\">Log in</button></li></ul>";
+                    echo $nav;
+                }
+                ?>
+        </div>
     </nav>
 
     <div class="container" style="padding-top: 5em; padding-bottom: 2em;">
