@@ -11,7 +11,12 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="css/styles.css">
-
+      <style>
+            *{
+                font-family: georgia,'Times New Roman',serif;
+                font-weight: bold;
+            }
+        </style>
    </head>
 
    <body >
@@ -36,7 +41,7 @@
                </li>
       
                <li class="navbar-item">
-                  <a href="#" class="nav-link">About Us</a>
+                  <a href="about.php" class="nav-link">About Us</a>
                </li>
       
                <li class="navbar-item">
@@ -68,17 +73,12 @@
          </div>
       </div>
 
-      <div class="parallax text-center">
-         <h1 style=" top: 40%; font-size: 100px;" class="col-sm-12">Contact Us</h1>
+      <div class="parallax text-center" style="background-image: url('img/contact.webp')">
+         <h1 style=" top: 40%; font-size: 100px;" class="col-sm-12 text-white">Contact Us</h1>
       </div>
 
       <div class="container" style="text-align: center;">
          <h2>
-            1)LG india electronics pvt ltd,​<br>
-
-            2)SHARP Business System India ltd,​<br>
-
-            3)Blue Star ltd,​<br>
             <br><br>
             <h1 style="letter-spacing: normal;">Call Us:</h1>
             <h2>Tel:<a href="tel:9619618394">9619618394</a></h2>

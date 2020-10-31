@@ -11,7 +11,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
-
+        <style>
+            *{
+                font-family: georgia,'Times New Roman',serif;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-warning" id="navbar">
@@ -68,10 +73,10 @@
     
         
         <div class="parallax" style="background-image: url('img/career.webp'); text-align: center;">
-            <h1 style="color: aliceblue; top: 40%; font-size: 100px;text-decoration: underline;" class="col-sm-12">Career</h1>
+            <h1 style="color: aliceblue; top: 40%; font-size: 100px;" class="col-sm-12">Career</h1>
         </div>
         <div class="row" style="text-align: center;">
-            <h2 class="container text-center" style="border-top: solid 0.5px red; font-size: 3em;">
+            <h2 class="container text-center" style="border-top: solid 0.5px red; font-size: 3em;padding-top: 2em;">
                 Logistics:
                 <div style="font-size: 0.7em;">
                     It is the process of planning and executing the efficient transportation and storage of goods from
@@ -87,25 +92,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 text-center">
-                    <img src="img/fas.jpg" class="img-fluid" height="100">
+                    <img src="img/fas.jpg"  height="150" >
                     <h4>Fast Delivery</h4>
                 </div>
 
                 <div class="col-sm-3 text-center" style="top:2em;">
-                    <img src="img/History-title.png" class="img-fluid" height="100">
+                    <a href="history.php"><img src="img/History-title.png"  height="100" width="250"></a>
                     <h4>History</h4>
                 </div>
 
                 <div class="col-sm-3 text-center">
-                    <img src="img/car.gif" class="img-fluid">
+                    <img src="img/car.gif" height="150">
                     <h4>Only Certified Motors</h4>
                 </div>
 
                 <div class="col-sm-3 text-center">
-                    <img src="img/client.webp" class="img-fluid rounded-circle">
+                    <a href="about.php"><img src="img/client.webp" height="130" class="rounded-circle"></a>
                     <h4>Our clientele</h4>
                 </div>
-
             </div>
         </div>
 

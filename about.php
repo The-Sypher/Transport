@@ -10,7 +10,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
-
+        <style>
+            *{
+                font-family: georgia,'Times New Roman',serif;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-warning" id="navbar">
@@ -34,7 +39,7 @@
                     </li>
         
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="about.php" class="nav-link">About Us</a>
                     </li>
         
                     <li class="navbar-item">
@@ -68,34 +73,34 @@
         <div class="parallax" style="background-image: url('img/History.webp'); text-align: center;">
             <h1 style="color: aliceblue; top: 40%; font-size: 100px;" class="col-sm-12">About Us</h1>
         </div>
-        <div class="container">
+        <div class="container" style="padding-top: 2em;">
             
-            <h2>Together We Can</h2>
+            <h2 class="text-center">Together We Can</h2>
             <br>
-            <h3>
+            <h3 class="text-center">
                 We are an end - to - end Transport solution provider offering services to requisite companies.
                 We have a unique business model that is aimed at increasing speed and flexibility ,
                 minimizing overheads amd maximizing customer satisfaction.
             </h3>
             <br><br>
-            <h4>
-                <p class="text-center">
+            <h4 style="text-transform: uppercase;">
+                <p class="text-center" style="text-transform: none">
                     Our Clientele: We have the privilege of handling of some of the premier organizationsin india like:
                 </p>
 
-                1)lg india electronics pvt ltd,​<br>
+                1) lg india electronics pvt ltd,​<br><br>
 
-                2)sharp business system india ltd,​<br>
+                2) sharp business system india ltd,​<br><br>
 
-                3)blue star ltd,​<br>
+                3) blue star ltd,​<br><br>
 
-                4)videocon group,​<br>
+                4) videocon group,​<br><br>
 
-                5)onida - mrc electronics pvt ltd,​<br>
+                5) onida - mrc electronics pvt ltd,​<br><br>
 
-                6)viajy sales,​<br>
+                6) viajy sales,​<br><br>
 
-                7) ipca pharmaceutical company ,​<br>
+                7) ipca pharmaceutical company ,​<br><br>
 
                 8)cannon india ltd.​
             </h4><br>​<br>​<br>

@@ -44,6 +44,12 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Transport</title>
+    <style>
+            *{
+                font-family: georgia,'Times New Roman',serif;
+                font-weight: bold;
+            }
+        </style>
 </head>
 
 <body>

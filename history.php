@@ -11,7 +11,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
-
+        <style>
+            *{
+                font-family: georgia,'Times New Roman',serif;
+                font-weight: bold;
+            }
+        </style>
     </head>
 
     <body>
@@ -36,7 +41,7 @@
                     </li>
         
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="about.php" class="nav-link">About Us</a>
                     </li>
         
                     <li class="navbar-item">
@@ -69,11 +74,11 @@
             </div>
         </div>
         <div class="parallax" style="background-image: url('img/History.webp'); text-align: center;">
-                <h1 style="color: aliceblue; top: 40%; font-size: 100px;text-decoration: underline;" class="col-sm-12">History</h1>
+                <h1 style="color: aliceblue; top: 40%; font-size: 100px;" class="col-sm-12">History</h1>
         </div>
             
 
-        <div class="container text-center" style="border-top: solid 0.5px red;">
+        <div class="container text-center" style="border-top: solid 0.5px red;padding-top: 5em">
             <h2>
                 SWIFT TRANSPORT (ST) by 'Mr.Anand Borade' one of the finest Transport solutions in the market as of today. It shares a set of fivecore values :integrity , understanding , excellence, unity and responsibility .It aims at providing thebest services at affordable prices and on time safe delivery .Here at ST we are making every possibleeffort to make your move smooth.
             </h2>
@@ -82,7 +87,7 @@
                 OBJECTIVE:
             </h3>
             <h4>
-                OUR ASPIRATION IS TO BE A WORLD -CLASS TRANSPORT  COMPANY WITH DOMINANT INDIAN LEADERSHIP
+                OUR ASPIRATION IS TO BE A WORLD-CLASS TRANSPORT  COMPANY WITH DOMINANT INDIAN LEADERSHIP
                 AND GLOBAL PRESENCE.
             </h4>
             <br><br>

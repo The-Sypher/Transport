@@ -8,6 +8,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
+        <style>
+            *{
+                font-family: georgia,'Times New Roman',serif;
+                font-weight: bold;
+            }
+        </style>
     
     </head>
 
@@ -33,7 +39,7 @@
                     </li>
         
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="about.php" class="nav-link">About Us</a>
                     </li>
         
                     <li class="navbar-item">
