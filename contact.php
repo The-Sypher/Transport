@@ -69,7 +69,7 @@
       <div class="container" style="padding-top: 5em; padding-bottom: 2em;">
          <div class="row">
             <div class="col-sm-4">
-               <h1><b>SWIFTT TRANSPORT...</b></h1>
+               <h1><b>SWIFT TRANSPORT...</b></h1>
             </div>
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
