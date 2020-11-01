@@ -62,7 +62,7 @@
                 }
                 if(isset($_SESSION['login']))
                 {
-                    $nav = "<ul class=\"navbar-nav ml-auto\"><li class=\"nav-item\"><button type=\"button\" class=\"btn btn-outline-warning\" onclick=\"location.href='login.php'\">Log Out</button></li></ul>";
+                    $nav = "<ul class=\"navbar-nav ml-auto\"><li class=\"nav-item\"><button type=\"button\" class=\"btn btn-outline-danger\" onclick=\"location.href='login.php'\">Log Out</button></li></ul>";
                     echo $nav;
                 }
                 ?>
