@@ -6,11 +6,8 @@
     {
         $input_email=validate($_POST['email']);
         $input_password=validate($_POST['password']);
-        echo $input_email;
-        echo $input_password;
         $query="SELECT fname, lname, password FROM users WHERE email='$input_email'";
         $res=mysqli_query($conn,$query);
-        echo mysqli_error($conn);
         if(mysqli_num_rows($res)>0)
         {
             $row=mysqli_fetch_assoc($res);
