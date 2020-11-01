@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    unset($_SESSION['login']);
     $loginError="";
     include('php/conn.php');
     include('php/functions.php');
@@ -16,7 +18,6 @@
             $user_lname=$row['lname'];
             if(password_verify($input_password,$user_password))
             {
-                session_start();
                 $_SESSION['email']=$input_email;
                 $_SESSION['fname']=$user_fname;
                 $_SESSION['lname']=$user_lname;
